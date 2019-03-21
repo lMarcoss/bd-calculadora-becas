@@ -25,7 +25,11 @@ INSERT INTO GRUPOS (CVE_GRUPO, ID_LICENCIATURA, ESTATUS) VALUES
   ('804', 4, 'S'),
   ('604', 4, 'S'),
   ('404', 4, 'S'),
-  ('204', 4, 'S');
+  ('204', 4, 'S'),
+
+  ('303', 3, 'S'),
+  ('202', 2, 'S'),
+  ('106', 1, 'S');
 
   INSERT INTO ACTIVIDADES (NOMBRE_ACTIVIDAD, OBLIGATORIO, NUMERO_ALUMNOS, ESTATUS) VALUES
   ('CLUB DE AJEDREZ', 'N', 20, 'S'),
