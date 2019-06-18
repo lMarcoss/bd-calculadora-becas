@@ -101,7 +101,7 @@ CREATE TABLE USUARIOS (
 CREATE TABLE HORARIO_ACTIVIDAD (
   ID_HORARIO_ACTIVIDAD INT               NOT NULL AUTO_INCREMENT,
   ID_ACTIVIDAD         INT               NOT NULL,
-  HORA                 INT               NOT NULL,
+  HORA                 VARCHAR(20)       NOT NULL,
   AM_PM                ENUM ('AM', 'PM') NOT NULL,
   NUMERO_ALUMNOS       INT,
   ID_CICLO_ESCOLAR     INT               NOT NULL,
