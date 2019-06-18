@@ -1,3 +1,4 @@
+docker network create --subnet 192.160.0.0/16 ctrl-beca;
 docker stop calc-beca-bd-container
 docker rm calc-beca-bd-container
 docker build -t calc-beca-bd .
