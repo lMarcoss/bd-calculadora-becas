@@ -54,15 +54,15 @@ VALUES
 
 INSERT INTO HORARIO_ACTIVIDAD (ID_ACTIVIDAD, HORA, AM_PM, NUMERO_ALUMNOS, ID_CICLO_ESCOLAR, ID_USUARIO, ESTATUS, AGREGADO_POR, FECHA_CREACION)
 VALUES
-(3, 7, 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
-(3, 8, 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
-(3, 8, 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
-(4, 7, 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
-(4, 8, 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
-(5, 5, 'PM', 40, 1, 1, 'S', 'ADMIN', NOW()),
-(6, 7, 'AM', 50, 1, 1, 'S', 'ADMIN', NOW()),
-(7, 7, 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
-(8, 7, 'AM', 50, 1, 1, 'S', 'ADMIN', NOW());
+(3, '07', 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
+(3, '08', 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
+(3, '08', 'PM', 20, 1, 1, 'S', 'ADMIN', NOW()),
+(4, '07', 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
+(4, '08', 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
+(5, '05', 'PM', 40, 1, 1, 'S', 'ADMIN', NOW()),
+(6, '07', 'AM', 50, 1, 1, 'S', 'ADMIN', NOW()),
+(7, '07', 'AM', 30, 1, 1, 'S', 'ADMIN', NOW()),
+(8, '07', 'AM', 50, 1, 1, 'S', 'ADMIN', NOW());
 
 
 INSERT INTO PARCIALES (DESC_PARCIAL, PARCIAL_ACTUAL, AGREGADO_POR, FECHA_CREACION) VALUES
