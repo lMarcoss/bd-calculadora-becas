@@ -15,17 +15,17 @@ VALUES ('LEONARDO', 'MARCOS', 'SANTIAGO', 'ADMINISTRADOR', 'marcossleo2@gmail.co
        ('LUIS ÁNGEL', 'PEREZ', 'HERRERA', 'ENCARGADO', 'luis@gmail.com', '****', 'S', 'ADMIN', NOW())
 ;
 
-INSERT INTO HORARIO_ACTIVIDAD (ID_ACTIVIDAD, HORA, AM_PM, NUMERO_ALUMNOS, ID_USUARIO, CVE_PERIODO, ESTATUS,
+INSERT INTO HORARIO_ACTIVIDAD (ID_ACTIVIDAD, HORA, AM_PM, NUMERO_ALUMNOS, ID_USUARIO, CVE_PERIODO, DESC_PERIDODO, ESTATUS,
                                AGREGADO_POR, FECHA_CREACION)
-VALUES (3, '07', 'PM', 20, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (3, '08', 'PM', 20, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (3, '08', 'PM', 20, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (4, '07', 'AM', 30, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (4, '08', 'AM', 30, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (5, '05', 'PM', 40, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (6, '07', 'AM', 50, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (7, '07', 'AM', 30, 1, '2012-2013A', 'S', 'ADMIN', NOW()),
-       (8, '07', 'AM', 50, 1, '2012-2013A', 'S', 'ADMIN', NOW());
+VALUES (3, '07', 'PM', 20, 1, '1819B', 'SEM-MAR/19-JUN/19','S', 'ADMIN', NOW()),
+       (3, '08', 'PM', 20, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (3, '08', 'PM', 20, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (4, '07', 'AM', 30, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (4, '08', 'AM', 30, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (5, '05', 'PM', 40, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (6, '07', 'AM', 50, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (7, '07', 'AM', 30, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW()),
+       (8, '07', 'AM', 50, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', NOW());
 
 
 INSERT INTO PARCIALES (DESC_PARCIAL, PARCIAL_ACTUAL, FECHA_INICIO, FECHA_FIN,CVE_PERIODO, DESC_PERIODO,AGREGADO_POR, FECHA_CREACION)
