@@ -1069,3 +1069,37 @@ VALUES (132, 316, 86, null, null, 1, 'ADMIN', '2019-07-10 22:56:04', null, null)
 
  */
 INSERT INTO `calcbecabd`.`HORARIO_ACTIVIDAD` (`ID_ACTIVIDAD`, `HORA`, `AM_PM`, `NUMERO_ALUMNOS`, `ID_USUARIO`, `CVE_PERIODO`, `DESC_PERIDODO`, `ESTATUS`, `AGREGADO_POR`, `FECHA_CREACION`, `ACTUALIZADO_POR`, `FECHA_ACTUALIZACION`) VALUES (2, '08', 'AM', 40, 1, '1819B', 'SEM-MAR/19-JUN/19', 'S', 'ADMIN', '2019-08-14 17:29:56', null, null);
+
+INSERT INTO ROLES (NOMBRE_ROL, ESTATUS,AGREGADO_POR, FECHA_CREACION, ACTUALIZADO_POR, FECHA_ACTUALIZACION) VALUES ('ADMINISTRADOR','S','ADMIN', '2019-10-04 15:05:13', null, null);
+INSERT INTO ROLES (NOMBRE_ROL, ESTATUS,AGREGADO_POR, FECHA_CREACION, ACTUALIZADO_POR, FECHA_ACTUALIZACION) VALUES ('ENCARGADO', 'S','ADMIN', '2019-10-04 15:05:13', null, null);
+
+
+INSERT INTO MENU (ID_PADRE, NOMBRE, ICON, URL, AGREGADO_POR, FECHA_CREACION)
+VALUES
+    --  menu principal
+    (1, 'Configuración', 'mdi mdi-settings', 'configuracion', 'ADMIN', NOW()),
+    (2, 'Alumnos', 'mdi mdi-account', 'alumnos', 'ADMIN', NOW()),
+    (3, 'Reporte Actividad', 'mdi mdi-upload', 'reporte-actividades', 'ADMIN', NOW()),
+    (4, 'Catálogos', 'mdi mdi-book', 'catalogos', 'ADMIN', NOW()),
+    (5, 'Seguridad', 'mdi mdi-lock', 'seguridad', 'ADMIN', NOW()),
+    -- submenus
+    (1, 'Periodo', null, 'periodo', 'ADMIN', NOW()),
+    (1, 'Horario Actividades', null, 'horario-actividades', 'ADMIN', NOW()),
+
+    (2, 'Administración', null, 'admin', 'ADMIN', NOW()),
+    (2, 'Detalle Alumno', null, 'detalle', 'ADMIN', NOW()),
+    (2, 'Registro en Club', null, 'inscripcion-actividad', 'ADMIN', NOW()),
+    (2, 'Inscripciones', null, 'administrar-inscripciones', 'ADMIN', NOW()),
+
+    (3, 'Registro Asistencia Sala de Cómputo', null, 'asistencia-sala', 'ADMIN', NOW()),
+    (3, 'Registro % Actividades', null, 'registro-porcentaje-actividad', 'ADMIN', NOW()),
+    (3, 'Carga Horas Biblioteca', null, 'carga-hrs-biblioteca', 'ADMIN', NOW()),
+    (3, 'Carga Horas Sala de Cómputo', null, 'carga-hrs-sala-computo', 'ADMIN', NOW()),
+    (3, 'Reporte detallado', null, 'detallado', 'ADMIN', NOW()),
+
+    (4, 'Licenciaturas', null, 'licenciaturas', 'ADMIN', NOW()),
+    (4, 'Grupos', null, 'grupos', 'ADMIN', NOW()),
+    (4, 'Actividades', null, 'actividades', 'ADMIN', NOW()),
+
+    (5, 'Usuarios', null, 'usuarios', 'ADMIN', NOW())
+;
