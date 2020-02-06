@@ -107,7 +107,7 @@ SELECT *
 FROM PARCIALES;
 SELECT *
 FROM GRUPOS;
-*/
+
 
 show tables;
 
@@ -213,3 +213,4 @@ SELECT PP.ID_PARCIAL, PP.PARCIAL, P.DESC_PARCIAL, PARCIAL_ACTUAL,
                            PP.CVE_PERIODO, PP.DESC_PERIODO, PP.TOTAL_HORAS_BIBLIOTECA, PP.TOTAL_ASISTENCIA_SALA
                     FROM PARCIAL_PERIODO PP,
                          PARCIALES P;
+                         */
