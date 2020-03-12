@@ -1,6 +1,6 @@
 INSERT INTO ACTIVIDADES (NOMBRE_ACTIVIDAD, OBLIGATORIO, TIPO_ACTIVIDAD, ESTATUS, AGREGADO_POR, FECHA_CREACION)
-VALUES ('BIBLIOTECA',   'S', 'EX', 'S', 'ADMIN', NOW()),
-('SALA DE CÓMPUTO',     'N', 'EX', 'S', 'ADMIN', NOW()),
+VALUES ('BIBLIOTECA',   'S', 'B', 'S', 'ADMIN', NOW()),
+('SALA DE CÓMPUTO',     'S', 'EX', 'S', 'ADMIN', NOW()),
 ('CLUB DE AJEDREZ',     'N', 'EX', 'S', 'ADMIN', NOW()),
 ('EDUCACIÓN FÍSICA',    'N', 'EX', 'S', 'ADMIN', NOW()),
 ('RONDALLA',            'N', 'EX', 'S', 'ADMIN', NOW()),
@@ -346,3 +346,6 @@ VALUES (10, 1, 'ADMIN', '2020-02-25 00:04:55', null, null),
        (10, 22, 'ADMIN', '2020-02-25 00:04:55', null, null),
        (10, 23, 'ADMIN', '2020-02-25 00:04:55', null, null)
 ;
+
+update USUARIOS U set PASSWORD = sha2(concat('4^%m@=C*&c#L+%', 'prueba', 'U$|2AT>30!'), 224) where ID_USUARIO = 1;
+update USUARIOS U set PASSWORD = sha2(concat('4^%m@=C*&c#L+%', 'prueba', 'U$|2AT>30!'), 224) where ID_USUARIO = 2;
