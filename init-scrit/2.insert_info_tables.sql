@@ -53,7 +53,7 @@ VALUES
 
     (2, 'Carga Alumnos Periodo', null, 'admin', 'ADMIN', NOW()),
     (2, 'Detalle Alumno', null, 'detalle', 'ADMIN', NOW()),
-    (2, 'Registro en Club', null, 'inscripcion-actividad', 'ADMIN', NOW()),
+    (2, 'Registro en Actividad', null, 'inscripcion-actividad', 'ADMIN', NOW()),
     (2, 'Inscripciones', null, 'administrar-inscripciones', 'ADMIN', NOW()),
 
     (3, 'Registro Asistencia Sala de Cómputo', null, 'asistencia-sala', 'ADMIN', NOW()),
