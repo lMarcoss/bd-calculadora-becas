@@ -62,8 +62,8 @@ VALUES
     (null, 'Configuración', 'mdi mdi-settings', 'configuracion',1,'ADMIN', NOW(), 'S'),
     (null, 'Alumnos', 'mdi mdi-account', 'alumnos',2,'ADMIN', NOW(), 'S'),
     (null, 'Reporte Actividad', 'mdi mdi-upload', 'reporte-actividades',3,'ADMIN', NOW(), 'S'),
-    (null, 'Catálogos', 'mdi mdi-book', 'catalogos',5,'ADMIN', NOW(), 'S'),
-    (null, 'Seguridad', 'mdi mdi-lock', 'seguridad',6,'ADMIN', NOW(), 'S'),
+    (null, 'Catálogos', 'mdi mdi-book', 'catalogos',6,'ADMIN', NOW(), 'S'),
+    (null, 'Seguridad', 'mdi mdi-lock', 'seguridad',7,'ADMIN', NOW(), 'S'),
     -- submenus
     (1, 'Periodo', null, 'periodo',1,'ADMIN', NOW(), 'S'),
     (1, 'Horario Actividades', null, 'horario-actividades',2,'ADMIN', NOW(), 'S'),
@@ -89,11 +89,17 @@ VALUES
 INSERT INTO MENU (ID_PADRE, NOMBRE, ICON, URL, ORDER_MENU,AGREGADO_POR, FECHA_CREACION)
 VALUES
     --  menu principal
-    (null, 'Reporte % Becas', 'mdi mdi-library-books', 'reporte-becas',4, 'ADMIN', NOW()),
+    (null, 'Reporte % Becas', 'mdi mdi-library-books', 'reporte-becas',4, 'ADMIN', NOW()), -- 21
     -- submenu
-    (21, 'Reporte por Periodo', null, 'reporte-beca-colegiatura', 1,'ADMIN', NOW())
-;
+    (21, 'Reporte por Periodo', null, 'reporte-beca-colegiatura', 1,'ADMIN', NOW()),-- 22
 
+
+       --  menu principal
+    (null, 'Calcula %', 'mdi mdi-calculator', 'calcula-porcentaje',5, 'ADMIN', NOW()), -- 23
+    -- submenu
+    (23, 'Calcular % Beca', null, 'calcula-porcentaje-beca', 1,'ADMIN', NOW()),
+    (23, 'Calcular % Actividades', null, 'calcula-porcentaje-actividad', 2,'ADMIN', NOW())
+;
 
 
 
