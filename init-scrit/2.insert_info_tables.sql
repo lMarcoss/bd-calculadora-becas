@@ -23,7 +23,6 @@ VALUES ('ENCARGADO', 'S', 'ADMIN', '2019-10-04 15:05:13', null, null);
 INSERT INTO ROLES (NOMBRE_ROL, ESTATUS, AGREGADO_POR, FECHA_CREACION, ACTUALIZADO_POR, FECHA_ACTUALIZACION)
 VALUES ('ALUMNO', 'S', 'ADMIN', '2019-10-04 15:05:13', null, null);
 
-
 INSERT INTO USUARIOS (NOMBRES, APE_PATERNO, APE_MATERNO, ID_ROL, USERNAME, PASSWORD, ESTATUS, AGREGADO_POR,
                       FECHA_CREACION)
 VALUES ('LEONARDO', 'MARCOS', 'SANTIAGO', 1, 'marcossleo2@gmail.com', '****', 'S', 'ADMIN', NOW()),
@@ -87,19 +86,19 @@ VALUES
     (5, 'Usuarios', null, 'usuarios', 1,'ADMIN', NOW(), 'S')
 ;
 
-INSERT INTO MENU (ID_PADRE, NOMBRE, ICON, URL, ORDER_MENU,AGREGADO_POR, FECHA_CREACION)
+INSERT INTO MENU (ID_PADRE, NOMBRE, ICON, URL, ORDER_MENU,AGREGADO_POR, FECHA_CREACION, ESTATUS)
 VALUES
     --  menu principal
-    (null, 'Reporte % Becas', 'mdi mdi-library-books', 'reporte-becas',4, 'ADMIN', NOW()), -- 21
+    (null, 'Reporte Final', 'mdi mdi-library-books', 'reporte-becas',4, 'ADMIN', NOW(), 'S'), -- 21
     -- submenu
-    (21, 'Reporte por Periodo', null, 'reporte-beca-colegiatura', 1,'ADMIN', NOW()),-- 22
+    (21, 'Reporte por Periodo', null, 'reporte-beca-colegiatura', 1,'ADMIN', NOW(), 'S'),-- 22
 
 
        --  menu principal
-    (null, 'Calcula %', 'mdi mdi-calculator', 'calcula-porcentaje',5, 'ADMIN', NOW()), -- 23
+    (null, 'Calcula % Actividad', 'mdi mdi-calculator', 'calcula-porcentaje',5, 'ADMIN', NOW(), 'S'), -- 23
     -- submenu
-    (23, 'Calcular % Beca', null, 'calcula-porcentaje-beca', 1,'ADMIN', NOW()),
-    (23, 'Calcular % Actividades', null, 'calcula-porcentaje-actividad', 2,'ADMIN', NOW())
+    (23, 'Calcular % Beca', null, 'calcula-porcentaje-beca', 1,'ADMIN', NOW(), 'N'),
+    (23, 'Calcular % Asistencias', null, 'calcula-porcentaje-actividad', 2,'ADMIN', NOW(), 'S')
 ;
 
 
