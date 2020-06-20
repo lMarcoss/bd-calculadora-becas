@@ -90,12 +90,14 @@ INSERT INTO MENU (ID_PADRE, NOMBRE, ICON, URL, ORDER_MENU,AGREGADO_POR, FECHA_CR
 VALUES
     --  menu principal
     (null, 'Reporte Final', 'mdi mdi-library-books', 'reporte-becas',5, 'ADMIN', NOW(), 'S'), -- 21
+
     -- submenu
     (21, 'Reporte por Periodo', null, 'reporte-beca-colegiatura', 1,'ADMIN', NOW(), 'S'),-- 22
 
 
        --  menu principal
     (null, 'Calcula % Actividad', 'mdi mdi-calculator', 'calcula-porcentaje',4, 'ADMIN', NOW(), 'S'), -- 23
+
     -- submenu
     (23, 'Calcular % Beca', null, 'calcula-porcentaje-beca', 1,'ADMIN', NOW(), 'N'),
     (23, 'Calcular % Asistencias', null, 'calcula-porcentaje-actividad', 2,'ADMIN', NOW(), 'S')
