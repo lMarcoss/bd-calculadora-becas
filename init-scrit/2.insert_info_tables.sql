@@ -136,26 +136,96 @@ INSERT INTO ACTIVIDAD_ALUMNO (ID_ACTIVIDAD_ALUMNO, ID_HORARIO_ACTIVIDAD, ID_ALUM
 INSERT INTO ACTIVIDAD_ALUMNO (ID_ACTIVIDAD_ALUMNO, ID_HORARIO_ACTIVIDAD, ID_ALUMNO_P, AGREGADO_POR, FECHA_CREACION, ACTUALIZADO_POR, FECHA_ACTUALIZACION) VALUES (2, 3, 1, 'ADMIN', '2020-04-19 06:07:28', null, null);
 */
 
+
+
+-- Nota: solo se necesita asignar el submenu al usuario
 delimiter //
-create  procedure INSERT_MENU_ROL()
+create procedure INSERT_MENU_ROL()
 begin
-    DECLARE V_END_MENU BOOLEAN DEFAULT FALSE;
-    DECLARE V_ID_MENU INT;
-    DECLARE MENU CURSOR FOR SELECT ID_MENU FROM MENU where ID_PADRE is not null AND ESTATUS = 'S';
-    DECLARE CONTINUE HANDLER FOR NOT FOUND SET V_END_MENU := TRUE;
+    BEGIN
+        DECLARE V_ID_MENU INT;
+        DECLARE V_END_MENU_ADMIN BOOLEAN DEFAULT FALSE;
+        -- ADMINISTRADOR
+        DECLARE MENU CURSOR FOR SELECT ID_MENU
+                                FROM MENU
+                                WHERE ESTATUS = 'S'
+                                  AND URL IN (
+                                              'periodo',
+                                              'horario-actividades',
+                                              'admin',
+                                              'detalle',
+                                              'inscripcion-actividad',
+                                              'administrar-inscripciones',
+                                              'asistencia-sala',
+                                              'registro-porcentaje-actividad',
+                                              'carga-hrs-biblioteca',
+                                              'carga-hrs-sala-computo',
+                                              'detallado',
+                                              'licenciaturas',
+                                              'grupos',
+                                              'actividades',
+                                              'usuarios',
+                                              'reporte-becas',
+                                              'reporte-beca-colegiatura',
+                                              'calcula-porcentaje',
+                                              'calcula-porcentaje-beca',
+                                              'calcula-porcentaje-actividad');
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET V_END_MENU_ADMIN := TRUE;
 
-    OPEN MENU;
 
-    LOOP_MENU: LOOP
-        FETCH MENU INTO V_ID_MENU;
-        if V_END_MENU then
-            LEAVE LOOP_MENU;
-        end if;
-        INSERT INTO MENU_ROL (ID_MENU, ID_ROL, AGREGADO_POR, FECHA_CREACION) VALUES (V_ID_MENU, 1, 'ADMIN', NOW());
-        INSERT INTO MENU_ROL (ID_MENU, ID_ROL, AGREGADO_POR, FECHA_CREACION) VALUES (V_ID_MENU, 2, 'ADMIN', NOW());
-    end loop LOOP_MENU;
+        OPEN MENU;
+        LOOP_MENU_ADMIN:
+        LOOP
+            FETCH MENU INTO V_ID_MENU;
+            if V_END_MENU_ADMIN then
+                LEAVE LOOP_MENU_ADMIN;
+            end if;
+            INSERT INTO MENU_ROL (ID_MENU, ID_ROL, AGREGADO_POR, FECHA_CREACION) VALUES (V_ID_MENU, 1, 'ADMIN', NOW());
+        end loop LOOP_MENU_ADMIN;
+        CLOSE MENU;
+    END;
 
-    CLOSE MENU;
+    BEGIN
+        DECLARE V_ID_MENU INT;
+        DECLARE V_END_MENU_ENCARGADO BOOLEAN DEFAULT FALSE;
+
+        -- ENCARGADO
+        DECLARE MENU CURSOR FOR SELECT ID_MENU
+                                FROM MENU
+                                WHERE ESTATUS = 'S'
+                                  AND URL IN (
+                                              'horario-actividades',
+                                              'admin',
+                                              'detalle',
+                                              'inscripcion-actividad',
+                                              'administrar-inscripciones',
+                                              'asistencia-sala',
+                                              'registro-porcentaje-actividad',
+                                              'carga-hrs-biblioteca',
+                                              'carga-hrs-sala-computo',
+                                              'detallado',
+                                              'licenciaturas',
+                                              'grupos',
+                                              'actividades',
+                                              'reporte-becas',
+                                              'calcula-porcentaje',
+                                              'calcula-porcentaje-beca',
+                                              'calcula-porcentaje-actividad');
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET V_END_MENU_ENCARGADO := TRUE;
+
+        OPEN MENU;
+        LOOP_MENU_ENCARGADO:
+        LOOP
+            FETCH MENU INTO V_ID_MENU;
+            if V_END_MENU_ENCARGADO then
+                LEAVE LOOP_MENU_ENCARGADO;
+            end if;
+            INSERT INTO MENU_ROL (ID_MENU, ID_ROL, AGREGADO_POR, FECHA_CREACION) VALUES (V_ID_MENU, 2, 'ADMIN', NOW());
+        end loop LOOP_MENU_ENCARGADO;
+        CLOSE MENU;
+
+
+    END;
 end //
 delimiter ;
 call INSERT_MENU_ROL();
